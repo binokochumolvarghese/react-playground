@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDfsjGG04vJG4D5mCS4dEtAlHNv8_m4j-A",
+  apiKey: "",
   authDomain: "react-note-app-4a475.firebaseapp.com",
   projectId: "react-note-app-4a475",
   storageBucket: "react-note-app-4a475.appspot.com",

@@ -57,38 +57,6 @@ export default function WeatherContextProvider( {children} ){
             // console.log(weatherResponse);
             // console.log(forecastResponse);
 
-            /*
-            const groupedData = forecastResponse.list.reduce((days, row) => {
-                const date = row.dt_txt.split(' ')[0];
-                days[date] = [...(days[date] ? days[date]: []), row];
-                return days;
-              }, {});
-              
-              for(let date of Object.keys(groupedData)){
-                console.log('Inside second fucntion'); 
-
-                console.log('Date:', groupedData); 
-                // current date -> date
-                // original items array for this date -> groupedData[date]
-                console.log('RowCount:', groupedData[date].length);
-                console.log('MaxTemp:', getMax(groupedData[date], 'temp_max'));
-                console.log('MinTemp:', getMin(groupedData[date], 'temp_min'));
-                console.log('MaxHumidity:', getMax(groupedData[date], 'humidity'));
-
-                const nextWeekWeatherObj = {
-                    date: groupedData[date],
-                    temp_max: getMax(groupedData[date], 'temp_max'),
-                    temp_min: getMax(groupedData[date], 'temp_min'),
-                    humidity: getMax(groupedData[date], 'humidity')
-                }
-
-                setNextDaysWeatherforecast()
-                
-                console.log('\n\n');
-              }
-              */     
-
-
         })
         .catch(function(err) {
           
