@@ -1,18 +1,20 @@
 import { useState, useCallback } from 'react';
+import DemoOutput from './DemoOutput';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
-  const [text, setText] = useState('');
+  const [show, setShow] = useState(false);
 
-  const handleClick = useCallback(() => {
-    console.log('Button clicked', count);
-  }, [count]);
-  
+  const showOutput = useCallback( () => {
+    setShow(!show);
+  },[show]);
+
   return (
-    <div>
-      <button onClick={handleClick}>Click me</button>
+    <div className='green-box'>
+      <h3>Using useCallback</h3>
+      <p> count: {count} </p>
       <button onClick={() => setCount(count + 1)}>Increment count</button>
-      <input value={text} onChange={(e) => setText(e.target.value)} />
+      <DemoOutput show={show} showOutput={showOutput}/>
     </div>
   );
 };

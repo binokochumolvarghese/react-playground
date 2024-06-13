@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import './App.css';
 import CallbackPage from '../src/components/CallbackPage' 
 import NoCallbackPage from '../src/components/NoCallbackPage' 
 
 function App() {
 
   return (
-    <>
-     {/* <CallbackPage/> */}
+    <div className='wrapper'>
+     <CallbackPage/>
      <NoCallbackPage/>
-    </>
+    </div>
   )
 }
 
